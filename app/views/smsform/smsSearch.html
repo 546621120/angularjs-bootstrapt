@@ -1,0 +1,133 @@
+<!-- /.row -->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading" >
+                <i class="fa fa-comment-o"></i> 短信列表
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <form role="form">
+                        <div class="col-lg-4">
+
+                                <div class="form-group">
+                                    <label class="control-label">手机号码：</label>
+                                    <input class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">起始时间：</label>
+                                    <div class="dropdown" >
+                                        <a class="dropdown-toggle" id="dropdownStart" role="button" data-toggle="dropdown" data-target="datepicker" href="datepicker">
+                                            <div class="input-group"><input type="text" class="form-control" data-ng-model="data.startdateDropDownInput"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                            </div>
+                                        </a>
+                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                            <datetimepicker data-ng-model="data.startdateDropDownInput" data-datetimepicker-config="{ dropdownSelector: '#dropdownStart' }"/>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">业务  I  D：</label>
+                                    <input class="form-control" placeholder="Enter text">
+                                </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="control-label">部门类型：</label>
+                                <select class="form-control">
+                                    <option>全部</option>
+                                    <option>资产管理部</option>
+                                    <option>运维部</option>
+                                    <option>资产部</option>
+                                    <option>武汉部</option>
+                                    <option>夸克理财</option>
+                                    <option>风险控制</option>
+                                    <option>市场部</option>
+                                </select>
+
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">结束时间：</label>
+                                <div class="dropdown" >
+                                    <a class="dropdown-toggle" id="dropdownEnd" role="button" data-toggle="dropdown" data-target="datepicker" href="datepicker">
+                                        <div class="input-group"><input type="text" class="form-control" data-ng-model="data.enddateDropDownInput"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                        <datetimepicker data-ng-model="data.enddateDropDownInput" data-datetimepicker-config="{ dropdownSelector: '#dropdownEnd' }"/>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">短信内容：</label>
+                                <input class="form-control" placeholder="Enter text">
+                            </div>
+
+                            <button type="submit" class="btn btn-default">条件查询</button>
+                            <button type="reset" class="btn btn-default">清空条件</button>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="control-label">业务类型：</label>
+                                <select class="form-control">
+                                    <option>全部</option>
+                                    <option>小贷通---理财</option>
+                                    <option>T24</option>
+                                    <option>CRM划扣</option>
+                                    <option>催收业务</option>
+                                    <option>夸克财富</option>
+                                    <option>UFO</option>
+                                    <option>小贷通---贷款</option>
+                                    <option>监控告警</option>
+                                    <option>核心业务</option>
+                                    <option>APP</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">状       态： </label>
+                                <select class="form-control">
+                                    <option>全部</option>
+                                    <option>未发送</option>
+                                    <option>发送成功</option>
+                                    <option>发送失败</option>
+                                    <option>黑名单</option>
+                                    <option>异常状态</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">发送渠道：</label>
+                                <select class="form-control">
+                                    <option>全部</option>
+                                    <option>亿美-才米</option>
+                                    <option>创蓝-监控</option>
+                                    <option>创蓝-夸克</option>
+                                    <option>亿美-夸克</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-default">手动发送短信</button>
+                            <button type="reset" class="btn btn-default">通道配置刷新</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.row (nested) -->
+                <br/>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div>
+                            <div id="smsgrid" ui-grid="smsgrid" ui-grid-resize-columns ui-grid-pagination  class="grid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.panel-body -->
+            <div class="panel-footer">
+                <div style="text-align: center">Copyright © 2014-2017 <a href="http://www.quarkfinance.com">quarkfinance.com</a></div>
+            </div>
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
